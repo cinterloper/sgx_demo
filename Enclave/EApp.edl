@@ -1,0 +1,9 @@
+enclave {
+    include "stdbool.h"
+
+    trusted{
+        public long ecall_create_user(unsigned long long bal);
+        public bool ecall_xfer(long from_uid, long to_uid, unsigned long long sum);
+        public unsigned long long ecall_get_balance(long id);
+    };
+};
